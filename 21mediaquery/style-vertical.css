@@ -1,0 +1,81 @@
+bod{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+nav{
+    display: none;
+
+}
+section{
+    border:1px solid black;
+    padding: 10px;
+}
+article{
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+div#imagem{
+    margin-top: 10px;
+    background-image: url(senac2.png);
+    background-size: contain;
+    height: 90vh;
+}
+h1{
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    background-color: blue;
+}
+.lista{
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(50, 50, 90, 1);
+}
+.titulo{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.4em;
+    color: bisque;
+}
+.titulo::after{
+    margin-top: -3px;
+    content: "III";
+    transform: rotate(90deg);
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.conteudo{
+    padding: 10px;
+    color: blue;
+    font-family: .875;
+    line-height: 1.4em;
+    display: none;
+    background-color: blue;
+
+}
+.a3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.a2{
+    display: none;
+
+}
+
+.a:checked + .a1 .conteudo{
+    display: inline-block;
+}
+
+.a:checked + .a1 .titulo::after{
+    transform: rotate(360deg) scale(1.08);
+    content: 'X';
+
+}

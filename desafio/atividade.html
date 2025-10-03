@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <Style>
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ; /*ou repeat(6, 1fr)*/
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr   ;
+        background-color: aquamarine;
+        gap: 5px;
+        height: 100vh;
+    }
+    header{
+        grid-column: 2/12;
+        grid-row: 1;
+        background-color: rgb(21, 98, 73);
+    }
+    section{
+        grid-column: 1;
+        grid-row: 1/4;
+        background-color: rgb(223, 14, 157);
+    }
+    nav{
+        grid-column: 2/7;
+        grid-row: 2;
+        background-color: rgb(58, 138, 152);
+    }
+    #a2{
+        grid-column: 7/12;
+        grid-row: 2;
+        background-color: rgb(58, 152, 108);
+    }
+    aside{
+        grid-column: 2/4;
+        grid-row: 3;
+        background-color: rgb(16, 15, 2);
+    }
+    article{
+        grid-column: 4/7;
+        grid-row: 3;
+        background-color: rgb(212, 31, 31);
+    }
+    #a3{
+        grid-column: 7/10;
+        grid-row: 3;
+        background-color: rgb(58, 133, 152);
+    }
+    #a4{
+        grid-column: 1/4;
+        grid-row: 4;
+        background-color: rgb(103, 205, 176);
+    }
+    #a5{
+        grid-column: 4/10;
+        grid-row: 4;
+        background-color: rgb(63, 60, 9);
+    }
+    #a6{
+        grid-column: 1/4;
+        grid-row: 5/7;
+        background-color: rgb(214, 207, 103);
+    }
+    #a7{
+        grid-column: 4/7;
+        grid-row: 5/7;
+        background-color: rgb(152, 58, 135);
+    }
+    #a8{
+        grid-column: 7/10;
+        grid-row: 5/7;
+        background-color: rgb(152, 146, 58);
+    }
+    #a9{
+        grid-column: 12;
+        grid-row: 1/4;
+        background-color: rgb(238, 239, 238);
+    }#a10{
+        grid-column: 10/12;
+        grid-row: 3;
+        background-color: rgb(9, 80, 9);
+    }
+    #a11{
+        grid-column: 10;
+        grid-row: 4;
+        background-color: rgb(13, 163, 13);
+    }
+    #a12{
+        grid-column: 11;
+        grid-row: 4;
+        background-color: rgb(69, 79, 69);
+    }
+    #a13{
+        grid-column: 12;
+        grid-row: 4;
+        background-color: rgb(29, 86, 29);
+
+    }
+    #a14{
+        grid-column: 10/13;
+        grid-row: 5;
+        background-color: rgb(61, 50, 98);
+    }
+
+    </Style>
+</head>
+<body>
+    <nav></nav>
+    <header></header>
+    <section></section>
+    <article></article>
+    <aside></aside>
+    <div id="a2"></div>
+    <div id="a3"></div>
+    <div id="a4"></div>
+    <div id="a5"></div>
+    <div id="a6"></div>
+    <div id="a7"></div>
+    <div id="a8"></div>
+    <div id="a9"></div>
+    <div id="a10"></div>
+    <div id="a11"></div>
+    <div id="a12"></div>
+    <div id="a13"></div>
+    <div id="a14"></div>
+</body>
+</html>

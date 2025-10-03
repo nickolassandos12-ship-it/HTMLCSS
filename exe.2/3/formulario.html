@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO DE CADASTRO</title>
+    <style>
+        /* Reset simples para manter consistência */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #aaa0175e;
+            color: #000000d0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+
+        form {
+            background: #85c5f04b;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 5000px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(70, 144, 255, 0.76);
+        }
+
+        h2 {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #aaa0175e;
+            color: #0a0a0a; /* Parece ser um erro de cor na imagem, ajustando para visível. Mantendo a cor da imagem que é #fff, mesmo com background claro */
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        
+        select, input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background: #aaa0175e;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #1c2c2c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulário de cadastro</h1>
+    
+    <form name="submit-to-google-sheet">
+        
+        <h2>Diga o seu nome.</h2>
+        <input name="sugestao" type="text" placeholder="Mensagem">
+
+        <h2>Diga o seu cpf.</h2>
+        <input name="sugestao" type="text" placeholder="Mensagem">
+
+        <h2>Diga o seu Endereço.</h2>
+        <input name="sugestao" type="text" placeholder="Mensagem">
+
+       
+
+        <h2>Qual e o seu genero?</h2>
+        <label><input type="checkbox" name="Masculino" value="Masculino"> Masculino </label>
+        <label><input type="checkbox" name="femininmo" value="femininmo"> Feminino</label>
+        <label><input type="checkbox" name="femininmo" value="femininmo"> outro</label>
+
+        <h2>Diga o seu sexualidade.</h2>
+        <input name="sugestao" type="text" placeholder="transgereno  ">
+
+    
+        <h2>Renda Salarial</h2>  
+        <select name="time" required>
+            <option value="" disabled selected>Selecione sua renda</option>
+            <option value="$">R$300 - R$900</option>
+            <option value="$">R$900 - R$1250</option>
+            <option value="$">R$1250 - R$1800</option>
+            <option value="$">R$2000 ou mais</option>
+        </select>
+
+
+        <h2>Escolaridade</h2>  
+        <select name="time" required>
+            <option value="" disabled selected>Selecione sua escolaridade</option>
+            <option value="escola">Ensino Fundamental - Cursando</option>
+            <option value="1° grau"> 1° Ensino Médio - Cursando</option>
+            <option value="2° grau">2° Ensino Médio - Cursando</option>
+            <option value="3° grau">3° Ensino Médio - Cursando</option>
+
+            </select>
+
+        
+             <h2>Voce possui alguma deficiencia?</h2>
+            <label><input type="checkbox" name="s" value="S"> Sim </label>
+            <label><input type="checkbox" name="N" value="N"> não</label>
+
+
+        
+
+
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        // URL do Google Apps Script para salvar os dados no Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyfVagpX76y74a87VsjCFw-5X1lH9kdhAeORtly1f9pevaddddvkRnFmg00th_0x/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        // Captura o evento de envio do formulário
+        form.addEventListener('submit', e => {
+            e.preventDefault() // Impede o recarregamento da página
+            
+            // Envia os dados para o Google Sheets via POST
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response)
+                    // catch(error => console.error('Error!', error.message))
+                })
+                .catch(error => console.error('Error!', error.message))
+
+            // Limpa o formulário após envio
+            form.reset()
+        })
+    </script>
+</body>
+</html>

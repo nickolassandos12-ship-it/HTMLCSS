@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <Style>
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*ou repeat(6, 1fr)*/
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        background-color: aquamarine;
+        gap: 5px;
+        height: 100vh;
+    }
+    header{
+        grid-column: 1/7;
+        grid-row: 1;
+        background-color: rgb(21, 98, 73);
+    }
+    section{
+        grid-column: 1;
+        grid-row: 2/7;
+        background-color: rgb(152, 146, 58);
+    }
+    nav{
+        grid-column: 2/6;
+        grid-row: 2;
+        background-color: rgb(152, 146, 58);
+    }
+    #a2{
+        grid-column: 6;
+        grid-row: 2;
+        background-color: rgb(152, 146, 58);
+    }
+    aside{
+        grid-column: 2;
+        grid-row: 3;
+        background-color: rgb(152, 146, 58);
+    }
+    article{
+        grid-column: 3/6;
+        grid-row: 3;
+        background-color: rgb(152, 146, 58);
+    }
+    #a3{
+        grid-column: 6;
+        grid-row: 3;
+        background-color: rgb(152, 146, 58);
+    }
+    #a4{
+        grid-column: 2/4;
+        grid-row: 4;
+        background-color: rgb(152, 146, 58);
+    }
+    #a5{
+        grid-column: 4/7;
+        grid-row: 4;
+        background-color: rgb(152, 146, 58);
+    }
+    #a6{
+        grid-column: 2/4;
+        grid-row: 5/7;
+        background-color: rgb(152, 146, 58);
+    }
+    #a7{
+        grid-column: 4/6;
+        grid-row: 5/7;
+        background-color: rgb(152, 146, 58);
+    }
+    #a8{
+        grid-column: 6;
+        grid-row: 5/7;
+        background-color: rgb(152, 146, 58);
+    }
+
+    </Style>
+</head>
+<body>
+    <nav></nav>
+    <header></header>
+    <section></section>
+    <article></article>
+    <aside></aside>
+    <div id="a2"></div>
+    <div id="a3"></div>
+    <div id="a4"></div>
+    <div id="a5"></div>
+    <div id="a6"></div>
+    <div id="a7"></div>
+    <div id="a8"></div>
+</body>
+</html>

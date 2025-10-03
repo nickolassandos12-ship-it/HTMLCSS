@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>safio</title>
+    <style>
+        header{
+
+            
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            height: 100vh;
+            gap: 5px;
+            background-color: black;
+            
+        }
+        #linha1a{
+            width: 0;
+            height: 10;
+                       
+            grid-column: 2/5;
+            grid-row: 1/2;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 200px solid #e67e22;
+            
+        }
+        #linha1b{
+            grid-column: 5/17;
+            grid-row: 1/2;
+            background-color: aliceblue;
+
+        }
+        #linha1c{
+            grid-column: 17/21;
+            grid-row: 1/2;
+            background-color: aliceblue;
+
+        }
+        #linha2a{
+            grid-column: 1/5;
+            grid-row: 2/3;
+            background-color: blueviolet;
+
+        }
+        #linha2b{
+            grid-column: 5/8;
+            grid-row: 2/3;
+            background-color: blueviolet;
+        }
+        #linha2c{
+            border-radius: 100%;
+            grid-column: 9/13;
+            grid-row: 2/3;
+            background-color: blueviolet;
+        }
+        #linha2d{
+            grid-column: 14/16;
+            grid-row: 2/3;
+            background-color: blueviolet;
+            
+        }
+        #linha2e{
+            grid-column: 16/21;
+            grid-row: 2/3;
+            background-color: blueviolet;
+            
+        }
+        #linha3a{
+            grid-column: 1/10;
+            grid-row: 3;
+            background-color: rgb(138, 125, 151);
+
+        }
+        #linha3b{
+            grid-column: 10/21;
+            grid-row: 3;
+            background-color: rgb(138, 125, 151);
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div id="linha1a"></div>
+        <div id="linha1b"></div>
+        <div id="linha1c"></div>
+
+        <div id="linha2a"></div>
+        <div id="linha2b"></div>
+        <div id="linha2c"></div>
+        <div id="linha2d"></div>
+        <div id="linha2e"></div>
+
+        <div id="linha3a"></div>
+        <div id="linha3b"></div>
+        
+    </header>
+    
+</body>
+</html>

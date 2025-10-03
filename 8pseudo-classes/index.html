@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-classes</title>
+<head>
+    <style>
+        div{
+            display: inline-block;
+            background-color: burlywood;
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            height: 300px;
+        }
+        
+        div:hover{
+            background-color: crimson;
+        }
+        
+        div:active{
+            background-color: chartreuse;
+        }
+        
+        #ex2:active{
+            background-color: darkgreen;
+        }
+        
+        /*neste exemplo abaixo selecionamos  o id da div e com o sinal de (>) depois selecionamos o filho da classe no caso (h3)
+        Adicionamos o (display : none) para não aparecer nada na div */
+        #ex3 > h3{
+            display: none;
+        }
+        /*Neste exemplo abaixo selecionamos a div mais o id da div
+    'adicionamos a sub-classe de estado hover que faz com que passe o mouse para acontecer a ação,
+    Que no caso é a display block que vai aparecer o texto oculto*/
+    #ex3:hover > h3{
+        display: block;
+        color: blue;
+        margin-top: 205px;
+    }
+
+    /*Aqui quando passar o mouse por cima da área ira aparecer a imagem */
+    #ex3:hover {
+        background-image: url("OIP_300x300.webp");
+        width: 300px;
+        height: 300px;
+    }
+
+    /*Aqui quando mostrar o h3 vai adicionar um pseudo-element que esta dentro do content antes(before) e depois (after)*/
+    h3::before{
+        content: ">>";
+    }
+    h3::after{
+        content: "<<";
+    }
+
+    #ex20:checked{
+        background-color: blueviolet;
+    }
+
+</style>
+
+
+</head>
+<body>
+    <h1>Pseudo-Classes</h1>
+    <p>Pseudo-Classe ela deve estar relacionada a uma classe e ela está diretamente relacionada ao (estado) de um elemento ex:</p>
+    <p>Pseudo-element está relacionado ao elemento, eles alteram o conteúdo periférico de um elemento</p>
+    <p>Se ele está marcado,</p>
+    <p>Se ele está vazio,</p>
+    <p>se ele está desabilitado, entre outros.</p>
+    <p>Para selecionarmos Pseudo-Classes utilizamos o (:) mais o estado. </p>
+    <p>Para adicionarmos pseudo-element utilizamos o (::)</p>
+    <p>Para selecionarmos o children (filho) na hierarquia utilizamos o (>)</p>
+    
+    <h4>Vamos criar algumas divs para exemplificar nossas Pseudo-Classes.</h4>
+
+    <div id="ex1">Exemplo1</div>
+
+    <div id="ex2">
+        <form>
+            <input type="checkbox" id="ex20">Exemplo2
+        </form>
+    </div>
+
+    <div id="ex3">Exemplo3
+        <p>Passe o mouse aqui nesta área</p>
+        <h3>Olá, você conseguiu ver a mensagem oculta?</h3>
+    </div>
+</body>
+</html>

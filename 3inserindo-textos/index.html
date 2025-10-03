@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserindo textos</title>
+</head>
+<body>
+    <h1>Vamos inserir textos</h1>
+    <h1>Título</h1>
+    <h2>subtitulos</h2>
+    <h3>texto nivel 3</h3>
+    <h4>texto nivel 4</h4>
+    <h5>texto nivel 5</h5>
+    <h6>texto nivel 6</h6>
+
+    <!-- exemplos de negrito-->
+
+    <p>negrito pode ser escrito com a tag <b>&lt;b&gt;</b>.
+    </p>
+
+    <p> Ou com a tag semantica <strong>&lt;strong&gt;</p>
+
+    <!-- exemplos de italico-->
+    <p>Italico pode ser escrito com a gat <i>&lt;i&gt;</em>.</p>
+
+    <!-- marcaçoes e formatações-->
+
+    <p>Texto marcad com <mark style= "background-color: yellow;">mark</mark>.</p>
+    <p>Texto em tamanho <big>grande</big> e <small>pequeno</small></p>
+
+    <p>Texto <del> riscado</del>, <ins>sublinhado</ins> (semantico), e <u>sublinhado</u> (nao semantico).</p>
+    <p>Texto com aspas semanticas: <q>exemplo</q>.</p>
+    <p> texto sobrescrito: x<sup>2</sup>, e subscrito: h<sub>2</sub>0.</p>
+    <p>abreviações: <abbr title="e o que dá sentido">semantica</abbr>.</p>
+    <p>texto invertido com BDO: <bdo dir="rtl">invertido</bdo>.</p>
+
+    <!--gerador de texto-->
+
+    <p>Para gerar texto aleatorio usamos "lorem" ou "lorem25".</p>
+    <p>Lorem ipsum dolor, sit amet conserctetur adipisicing elit. beatae, eligendi consequatur rerum consequuntur molestiae rem,
+     esse incidunt facere ipsam dolore nisi impedot recusandae sequi amet.</p>
+        
+    <!--LISTA ORDENADA -->
+
+    <H2>lista ordenada</H2>
+    <ol>
+        <li>Primeira linha da lista.</li>
+        <li>
+            Lista interna:
+            <ol>
+                <li>Item da lista interna</li>
+                <li>Outro item interno</li>
+            </ol>
+        </li>
+        <li>segunda linha da lista.</li>
+        <li>
+            lista com letras:
+            <ol type="A">
+                <li>Item A</li>
+                <li>Item B</li>
+            </ol>
+        </li>
+        <li>Terceira lista da linha.</li>
+        <li>
+            Lista com números romanos maiúsculo
+            <ol type="I">
+                <li>Item I</li>
+                <il>Item II</il>
+            </ol>
+        </li>
+        <li>
+            Lista com números romanos minúsculos
+            <ol type="i">
+                <li>Item i</li>
+                <li>Item ii</li>
+            </ol>
+
+        </li>
+    </ol>
+    
+    <!-- Lista não ordenada -->
+    <h2> Lista não ordenada</h2>
+    <ul>
+        <li>Primeira linha</li>
+        <li>
+            Lista com marcadores quadrados:
+            <ul type="square">
+                <li>Marcador quadrado</li>
+            </ul>
+        </li>
+        <li>
+            Lista com marcadores circulares:
+            <ul type="cicle">
+                <li>Marcador circular</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- cÓDIGO EM html COM <PRE> E <CODE>-->
+    <h2> Exemplo de codigo com <code>&lt;code&gt;</code> e 
+    <code>&lt;pre&gt;</code></h2>
+    <p> para inserir codigo, use <code>&lt;code&gt;</code>
+    com <code>&lt;pre&gt;</code> para manter a formatação.</p>
+
+    <pre><code>
+function primo() {
+    var numero = parseint(document.getElementById('num').
+    value;)
+    var resposta = document.getElementById('resposta');
+    var divisores = 0;
+}
+    </code></pre>
+
+</body>
+</html>

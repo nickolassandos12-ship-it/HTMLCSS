@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            display: grid;
+            grid-template-columns: repeat(20, 1fr) ;
+            grid-template-rows: repeat(2, 1fr);
+            height: 20vh;
+            gap: 5px;
+            background-color: blue;
+        }
+        #linha1a{
+            grid-column: 1/3;
+            grid-row: 1/2;
+            background-color: chocolate;
+        }
+        #linha1b{
+            grid-column: 8/14;
+            grid-row: 1/2;
+            background-color: rgb(108, 80, 60);
+
+        }
+        #linha1c{
+            grid-column: 19/21;
+            grid-row: 1/2;
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="linha1a"></div>
+        <div id="linha1b"></div>
+        <div id="linha1c"></div>
+        <div id="linha1d"></div>
+        <div id="linha1e"></div>
+        <div id="linha1f"></div>
+        <div id="linha1g"></div>
+    </header>
+    
+</body>
+</html>

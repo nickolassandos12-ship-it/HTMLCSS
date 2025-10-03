@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        /* Reset simples para manter consistência */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e4f4f4;
+            color: #fff; /* Parece ser um erro de cor na imagem, ajustando para visível. Mantendo a cor da imagem que é #fff, mesmo com background claro */
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        
+        select, input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background: #2f4f4f;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #1c2c2c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulários</h1>
+    
+    <form name="submit-to-google-sheet">
+        <h2>Qual seu time do coração?</h2>
+        <select name="time" required>
+            <option value="" disabled selected>Selecione seu time</option>
+            <option value="atletico">Atlético</option>
+            <option value="america">América</option>
+            <option value="vilanova">Vila Nova</option>
+            <option value="cruzeiro">Cruzeiro</option>
+        </select>
+
+        <h2>Qual brinde você gostaria de ganhar?</h2>
+        <label><input type="checkbox" name="brindes" value="camisa"> Camisa do time</label>
+        <label><input type="checkbox" name="brindes" value="ingresso"> Ingresso VIP</label>
+
+        <h2>Você já foi ao estádio em dia de jogos?</h2>
+        <label><input type="radio" name="pesquisa" value="sim"> Já fui ao Mineirão</label>
+        <label><input type="radio" name="pesquisa" value="nao"> Não fui ao Mineirão</label>
+
+        <h2>Aproximadamente quantas vezes?</h2>
+        <label><input type="radio" name="vezes" value="0"> 0 vezes</label>
+        <label><input type="radio" name="vezes" value="1-7"> 1 a 7 vezes</label>
+        <label><input type="radio" name="vezes" value="mais"> Acima de 7</label>
+
+        <h2>Diga o que aqui sugestão.</h2>
+        <input name="sugestao" type="text" placeholder="Mensagem">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        // URL do Google Apps Script para salvar os dados no Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyfVagpX76y74a87VsjCFw-5X1lH9kdhAeORtly1f9pevaddddvkRnFmg00th_0x/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        // Captura o evento de envio do formulário
+        form.addEventListener('submit', e => {
+            e.preventDefault() // Impede o recarregamento da página
+            
+            // Envia os dados para o Google Sheets via POST
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response)
+                    // catch(error => console.error('Error!', error.message))
+                })
+                .catch(error => console.error('Error!', error.message))
+
+            // Limpa o formulário após envio
+            form.reset()
+        })
+    </script>
+</body>
+</html>

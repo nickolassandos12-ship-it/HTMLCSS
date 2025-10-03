@@ -1,0 +1,131 @@
+div {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  #cx1 {
+    margin-top: 100px;
+    background-color: aquamarine;
+    border-color: blue;
+    border-width: 5px;
+    border-style: dashed;
+    outline-width: 10px;
+    outline-style: double;
+    outline-color: brown;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  #cx2 {
+    margin-left: 100px;
+    background-color: burlywood;
+    border-color: blueviolet;
+    border-width: 5px;
+    border-style: dotted;
+    outline-width: 10px;
+    outline-style: dashed;
+    outline-color: brown;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  #cx3 {
+    margin-right: 100px;
+    background-color: cornflowerblue;
+    border-color: chartreuse;
+    border-width: 10px;
+    border-style: double;
+    outline-width: 10px;
+    outline-style: groove;
+    outline-color: brown;
+    padding: 10px 20px 10px 20px;
+  }
+  
+  #cx4 {
+    margin: auto;
+    background-color: darkorange;
+    /*Aqui em baixo simplificado com shorthands*/
+    border: 10px groove orchid;
+    outline: 10px ridge brown;
+    padding: 10;
+  }
+  
+  #cx5 {
+    box-shadow: 5px 5px 5px 5px;
+  }
+  
+  #cx6 {
+    box-shadow: 5px 5px 5px;
+  }
+  
+  #cx7 {
+    box-shadow: 5px 10px 5px 5px rgb(218, 168, 132);
+  }
+  
+  #cx8 {
+    box-shadow: 5px 5px 50px 10px;
+  }
+  
+  #cx9 {
+    box-shadow: inset 5px 5px 50px 10px;
+  }
+  
+  #cx10 {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px black;
+  }
+  
+  #cx11 {
+    border-radius: 10px 50px;
+    box-shadow: 2px 2px 5px 5px black;
+  }
+  
+  #cx12 {
+    border-radius: 0% 20% 0% 0%;
+    box-shadow: 2px 2px 5px 5px black;
+  }
+  
+  #cx13 {
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px 5px black;
+  }
+  
+  h2 {
+    margin-top: 90px;
+    color: hsl(0, 100%, 52%);
+    text-align: center;
+  }
+  
+  h1 {
+    color: hsl(241, 100%, 52%);
+    text-align: center;
+  }
+  
+  main {
+    width: 95%;
+    height: 1700px;
+    border: 2px solid black;
+    padding: 5px;
+    box-shadow: 2px 2px 5px 5px black;
+  }
+  
+  section > div {
+    display: inline-block;
+  }
+  
+  section {
+    width: 95%;
+    height: 1000px;
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px 5px black;
+  }
+  
